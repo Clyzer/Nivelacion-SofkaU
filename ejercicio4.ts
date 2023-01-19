@@ -1,6 +1,6 @@
 // Función para obtener el promedio
 function promedio(numeros: Array<number>) : number {
-    var total = 0
+    let total = 0
     numeros.forEach((numero) => {
         total = total + numero
     });
