@@ -1,5 +1,6 @@
 // Creamos un arbol de caracteres utilizando un numero como altura
 function imprimirArbol(n: number){
+    let base : string = "***"
     let espacios : number
     let estrellas : number
     n = Math.round(n)
@@ -8,7 +9,6 @@ function imprimirArbol(n: number){
         espacios = n - index
         console.log(" ".repeat(espacios) + "*".repeat(estrellas))
     }
-    let base : string = "***"
     console.log(" ".repeat(n - 1) + base)
 }
 
