@@ -3,11 +3,9 @@ const Regex3 = RegExp(/\s/g)
 
 // En este caso utilizamos unicamente metodos de los array para realizar lo anteriormente hecho y lo devolvemos como tal
 function crearPalindromo2(texto: string) : Array<string>{
-    let palindromo : Array<string> = texto.toUpperCase().replace(Regex3, "").split("")
-    let izquierda : Array<string> = texto.toUpperCase().replace(Regex3, "").split("").reverse()
-    if (palindromo.slice(-1).toString() === izquierda[0]){
-        izquierda = izquierda.slice(1)
-    }
+    let palindromo = Array.from(texto.toUpperCase().replace(Regex3, ""))
+    palindromo = palindromo.slice(0, palindromo.length - 1)
+    let izquierda = Array.from(texto.toUpperCase().replace(Regex3, "")).reverse()
     palindromo = palindromo.concat(izquierda)
     return palindromo
 }
