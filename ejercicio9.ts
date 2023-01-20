@@ -7,7 +7,7 @@ function imprimirArbol(n: number){
     for (let index = 0; index < n; index++) {
         estrellas = (index * 2) + 1
         espacios = n - index
-        console.log(" ".repeat(espacios) + "*".repeat(estrellas))
+        console.log(" ".repeat(espacios) + "*".repeat(estrellas) + " ".repeat(espacios))
     }
     console.log(" ".repeat(n - 1) + base)
 }

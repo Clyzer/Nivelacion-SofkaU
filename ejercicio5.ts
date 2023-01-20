@@ -1,7 +1,7 @@
 // Creamos la interfaz "FiguraGeometrica" y le agregamos 2 métodos vacios como parametros
 interface FiguraGeometrica {
-    calcularArea() : void
-    calcularPermitero() : void
+    calcularArea() : number
+    calcularPermitero() : number
 }
 
 // Añadimos una clase abstracta que implemente la interface anterior y le creamos un constructor para darle un valor a su nueva propiedad "nombre" que sera privada
@@ -10,8 +10,8 @@ abstract class Figura implements FiguraGeometrica {
     constructor(nombreFigura : string) {
         this.nombre = nombreFigura
     }
-    abstract calcularArea() : void
-    abstract calcularPermitero() : void
+    abstract calcularArea() : number
+    abstract calcularPermitero() : number
 }
 
 // Ahora si creamos una clase que se extiende de la clase anterior y le agrega como propiedad un "radio" y sobreescribimos los metodos ahora si con sus respectivas formulas
