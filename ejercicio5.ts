@@ -6,8 +6,8 @@ interface FiguraGeometrica {
 
 // Añadimos una clase abstracta que implemente la interface anterior y le creamos un constructor para darle un valor a su nueva propiedad "nombre" que sera privada
 abstract class Figura implements FiguraGeometrica {
-    private nombre: string
-    constructor(nombreFigura: string) {
+    private nombre : string
+    constructor(nombreFigura : string) {
         this.nombre = nombreFigura
     }
     abstract calcularArea() : void
@@ -16,8 +16,8 @@ abstract class Figura implements FiguraGeometrica {
 
 // Ahora si creamos una clase que se extiende de la clase anterior y le agrega como propiedad un "radio" y sobreescribimos los metodos ahora si con sus respectivas formulas
 class Circulo extends Figura {
-    radio: number
-    constructor(nombreFigura: string, radio: number) {
+    radio : number
+    constructor(nombreFigura : string, radio : number) {
         super(nombreFigura)
         this.radio = radio
     }
@@ -26,7 +26,7 @@ class Circulo extends Figura {
         return +(Math.PI * (this.radio * 2)).toFixed(2)
     }
     // Area de un circulo = PI * radio^2 (Al resultado le dejamos unicamente las primeras 2 decimales)
-    calcularArea(): number {
+    calcularArea() : number {
         return +(Math.PI * Math.pow(this.radio, 2)).toFixed(2)
     }
 }
@@ -34,7 +34,7 @@ class Circulo extends Figura {
 // Hacemos lo mismo que arriba pero esta vez para un cuadrado, en este caso la propiedad que se le agregara sera "lado" y tambien sobreescribimos los metodos con sus formulas
 class Cuadrado extends Figura {
     lado: number
-    constructor(nombreFigura: string, lado: number) {
+    constructor(nombreFigura : string, lado : number) {
         super(nombreFigura)
         this.lado = lado
     }
@@ -43,7 +43,7 @@ class Cuadrado extends Figura {
         return +(4 * this.lado).toFixed(2)
     }
     // Area de un cuadrado = lado^2 (Al resultado le dejamos unicamente las primeras 2 decimales)
-    calcularArea(): number {
+    calcularArea() : number {
         return +(Math.pow(this.lado, 2)).toFixed(2)
     }
 }
@@ -57,7 +57,7 @@ class CrearFiguras{
     // Creamos una variable para acceder mas facilmente al enum previamente creado en la misma class
     tipofigura = tipos
     // Por ultimo se crea la funcion mencionada en los comentarios anteriores
-    crear(nombre: string, tipo: tipos, valor: number){
+    crear(nombre : string, tipo : tipos, valor : number){
         if (tipo == tipos.circulo){
             return new Circulo(nombre, valor)
         } else if (tipo == tipos.cuadrado){
