@@ -56,14 +56,13 @@ enum tipos {circulo, cuadrado}
 class CrearFiguras{
     // Creamos una variable para acceder mas facilmente al enum previamente creado en la misma class
     tipofigura = tipos
+
     // Por ultimo se crea la funcion mencionada en los comentarios anteriores
-    crear(nombre : string, tipo : tipos, valor : number){
+    crear(nombre : string, tipo : tipos, valor : number) : Circulo | Cuadrado {
         if (tipo == tipos.circulo){
             return new Circulo(nombre, valor)
-        } else if (tipo == tipos.cuadrado){
-            return new Cuadrado(nombre, valor)
         } else {
-            return null
+            return new Cuadrado(nombre, valor)
         }
     }
 }
@@ -72,6 +71,7 @@ class CrearFiguras{
 
 const figuras = new CrearFiguras
 const circulo = figuras.crear("Circulito", figuras.tipofigura.circulo, 1)
-const cuadrado = figuras.crear("Cuadradito", figuras.tipofigura.cuadrado, 2)
-console.log("El area del circulo creado es " + circulo?.calcularArea() + " y su perimetro es " + circulo?.calcularPermitero())
-console.log("El area del cuadrado creado es " + cuadrado?.calcularArea() + " y su perimetro es " + cuadrado?.calcularPermitero())
+const cuadrado = figuras.crear("Cuadradito", figuras.tipofigura.cuadrado, 4)
+
+console.log("El area del circulo creado es " + circulo.calcularArea() + " y su perimetro es " + circulo.calcularPermitero())
+console.log("El area del cuadrado creado es " + cuadrado.calcularArea() + " y su perimetro es " + cuadrado.calcularPermitero())
