@@ -6,11 +6,11 @@ function imprimirArbol(n: number){
     n = Math.round(n)
     for (let index = 0; index < n; index++) {
         estrellas = (index * 2) + 1
-        espacios = n - index
+        espacios = n - index - 1
         console.log(" ".repeat(espacios) + "*".repeat(estrellas) + " ".repeat(espacios))
     }
-    console.log(" ".repeat(n - 1) + base + " ".repeat(n - 1))
+    console.log(" ".repeat(n - 2) + base + " ".repeat(n - 2))
 }
 
 // Probamos la función
-imprimirArbol(10)
+imprimirArbol(5)
