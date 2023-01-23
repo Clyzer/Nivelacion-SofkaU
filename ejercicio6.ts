@@ -18,7 +18,6 @@ function esPalindromo(texto : string) : boolean {
 }
 
 // Para finalizar comprobamos la función con distintos ejemplos
-
 console.log(esPalindromo("Hola"))
 console.log(esPalindromo("Somos"))
 console.log(esPalindromo("Son robos o sobornos"))
