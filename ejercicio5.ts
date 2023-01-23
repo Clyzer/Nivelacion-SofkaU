@@ -57,7 +57,7 @@ class CrearFiguras{
     // Creamos una variable para acceder mas facilmente al enum previamente creado en la misma class
     tipofigura = tipos
 
-    // Por ultimo se crea la funcion mencionada en los comentarios anteriores
+    // Por ultimo se crea la función mencionada en los comentarios anteriores
     crear(nombre : string, tipo : tipos, valor : number) : Circulo | Cuadrado {
         if (tipo == tipos.circulo){
             return new Circulo(nombre, valor)
